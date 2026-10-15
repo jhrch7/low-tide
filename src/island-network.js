@@ -1,0 +1,24 @@
+import {DISTRICTS,BUILDINGS,VEHICLES} from './content.js';import {player,toast} from './core.js';
+export const NETWORK_BUILDINGS=[
+{id:'pawn',name:'La Estrella Pawn & Repair',district:'old',x:-215,z:-140,w:22,d:20,h:9,type:'pawn',color:0xbcae94,enterable:true},
+{id:'wreckers',name:'Marea Wreckers',district:'port',x:-535,z:235,w:28,d:24,h:9,type:'chopshop',color:0x889a8f,enterable:true},
+{id:'casino',name:'Casa de Noche',district:'beach',x:285,z:615,w:28,d:24,h:15,type:'casino',color:0xcfac94,enterable:true},
+{id:'range',name:'East Yard Practice Range',district:'works',x:585,z:275,w:34,d:30,h:9,type:'range',color:0x929d8c,enterable:true},
+{id:'shelter',name:'San Telmo Trail Shelter',district:'forest',x:-735,z:-680,w:22,d:18,h:7,type:'shelter',color:0xaaa98c,enterable:true},
+{id:'transport',name:'Island Line Dispatch House',district:'ridge',x:165,z:-490,w:24,d:20,h:11,type:'transport',color:0xd4ccb2,enterable:true},
+{id:'radio',name:'Radio Sal 103.7',district:'marsh',x:-790,z:550,w:25,d:20,h:8,type:'radio',color:0x9aaa96,enterable:true},
+{id:'annex',name:'Northlight Police Annex',district:'north',x:760,z:-455,w:24,d:22,h:10,type:'police',color:0xb8c4bf,enterable:true}
+];
+export function travel(s,id){const district=DISTRICTS.find(d=>d.id===id);if(!district||s.heat>0||s.mission||s.job||s.heist||s.cash<120){toast(s,'Island Line needs $120 and a quiet journey without an active operation.');return false}const stop=BUILDINGS.find(b=>b.district===id&&b.enterable);s.cash-=120;s.interior=null;s.car=null;Object.assign(player(s),{x:stop.x,z:stop.z+stop.d/2+3,swimming:false,crouched:false});s.time=(s.time+1)%24;s.flags.travelAt=s.elapsed||0;toast(s,`Island Line · arrived in ${district.name} · $120`);return true}
+export function sellStolen(s){const c=s.cars.find(c=>c.id===s.lastCar);if(!c||(!c.stolen&&!c.id.startsWith('traffic-'))||s.mission||s.job||s.heist){toast(s,'The yard accepts stolen civilian vehicles only, between operations.');return false}const m=VEHICLES.find(m=>m.id===c.model),pay=Math.max(120,Math.round((m.price||2400)*.24*Math.max(.2,c.health/100)));s.cash+=pay;s.cars=s.cars.filter(v=>v!==c);s.lastCar=s.cars[0]?.id;s.stats.fencedCars=(s.stats.fencedCars||0)+1;toast(s,`${m.name} stripped · $${pay} · its identity is gone.`);return true}
+export function networkActions(s,b){
+ if(b.type==='pawn')return[{id:'sellammo',text:'Trade 24 spare rounds · receive $45',cost:0,run:()=>{if(s.inventory.ammo<24){toast(s,'Bring 24 spare rounds.');return false}s.inventory.ammo-=24;s.cash+=45;toast(s,'Spare rounds traded · $45.')}},{id:'bodyarmor',text:'Used protective vest · $200',cost:200,run:()=>player(s).armor=45}];
+ if(b.type==='chopshop')return[{id:'fencecar',text:'Strip the last stolen civilian car',cost:0,run:()=>sellStolen(s)}];
+ if(b.type==='transport')return DISTRICTS.map(d=>({id:'travel_'+d.id,text:`Island Line to ${d.name} · $120`,cost:0,run:()=>travel(s,d.id)}));
+ if(b.type==='radio')return[{id:'dial',text:'Find the emergency signal',cost:0,run:()=>true},{id:'listen',text:'Tune Radio Sal',cost:0,run:()=>{s.settings.radio='harbor';s.flags.radioSal=true;toast(s,'Radio Sal: the working coast has a voice. Harbor FM tuned.')}},{id:'frequencies',text:'Read the emergency frequency card',cost:0,run:()=>{s.flags.channelCard=true;toast(s,'103.7 local · 97.4 emergency relay. The blackouts never silenced the old band.')}}];
+ if(b.type==='shelter')return[{id:'trailrest',text:'Trail bed and meal · $35',cost:35,run:()=>{player(s).hp=100;s.time=(s.time+2)%24}},{id:'trailkit',text:'Trail first-aid kit · $120',cost:120,run:()=>s.inventory.medkits=(s.inventory.medkits||0)+1}];
+ if(b.type==='police')return[{id:'fine',text:'Settle current wanted case · $300 + $200 per heat level',cost:0,run:()=>{const cost=300+Math.ceil(s.heat)*200;if((s.heat<=0&&!Object.values(s.hotCars||{}).some(c=>c.until>(s.elapsed||0)))||s.seen||s.cash<cost){toast(s,'No quiet settlement is available. Bring the fine after breaking visual contact.');return false}s.cash-=cost;s.heat=0;s.search=0;s.police=[];s.hotCars={};s.pendingReports=[];toast(s,'The fine is settled. Your island relationships remain.')}},{id:'publicnotice',text:'Read the public coast notice',cost:0,run:()=>toast(s,'Public access cannot be removed by a private survey. Complaints require the original signed map.')}];
+ if(b.type==='range')return[{id:'practice',text:'35-second target challenge · $50',cost:0,run:()=>true},{id:'practicemag',text:'Practice supply · 60 rounds · $100',cost:100,run:()=>s.inventory.ammo+=60}];
+ if(b.type==='casino')return[{id:'blackjack',text:'Take a seat at the blackjack table',cost:0,run:()=>true},{id:'casinomeal',text:'Night kitchen · $65',cost:65,run:()=>player(s).hp=100},{id:'casinocontact',text:'Meet the floor manager · $250',cost:250,run:()=>{s.flags.casinoContact=true;toast(s,'Nerea: the house plays fairer than Meridian. Ask about their collector.')}}];
+ return null;
+}

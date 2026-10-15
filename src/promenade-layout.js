@@ -1,0 +1,2 @@
+export const PROMENADE={x:160,z:950,w:110,d:48,top:.65};export const onPromenade=(x,z)=>Math.abs(x-160)<55&&Math.abs(z-950)<24;
+export const PROMENADE_PROPS=[...[115,128,190,205].map((x,i)=>({id:'club-bench-'+i,kind:'bench',x,z:965,w:2.2,d:.7,h:.8})),{id:'club-kiosk',kind:'stall',x:113,z:931,w:4,d:2,h:2.5},...[115,150,185].map((x,i)=>({id:'club-shop-'+i,kind:'solid',x,z:920,w:13,d:5,h:4.5})),{id:'club-rail',kind:'solid',x:160,z:973,w:110,d:.2,h:1.2}];

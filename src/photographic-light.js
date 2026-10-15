@@ -1,0 +1,2 @@
+import * as T from '../vendor/three.module.js';import {HDRLoader} from '../vendor/HDRLoader.js';
+export async function photographicLight(v){try{const hdr=await new HDRLoader().loadAsync('assets/spruit_sunrise_1k.hdr'),gen=new T.PMREMGenerator(v.r);v.hdrTarget?.dispose();v.hdrTarget=gen.fromEquirectangular(hdr);v.environmentTarget?.dispose();v.environmentTarget=null;v.environmentMap=v.hdrTarget.texture;v.scene.environment=v.environmentMap;hdr.dispose();gen.dispose();v.hdrReady=true}catch(e){v.assetErrors.push('Environment map: '+e.message)}}

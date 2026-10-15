@@ -1,0 +1,7 @@
+import * as T from '../vendor/three.module.js';
+export const COAST_CONTROLS=[[640,540],[730,580],[810,450],[890,280],[960,100],[960,-80],[900,-260],[820,-370],[850,-490],[870,-540],[810,-680],[700,-700],[640,-720]].map(([x,z])=>({x,z}));
+const curve=new T.CatmullRomCurve3(COAST_CONTROLS.map(p=>new T.Vector3(p.x,0,p.z)),false,'catmullrom',.35);
+export const COAST_ROAD=curve.getPoints(420).map(p=>({x:p.x,z:p.z}));
+const cells=new Map();for(let i=1;i<COAST_ROAD.length;i++){const a=COAST_ROAD[i-1],b=COAST_ROAD[i];for(let x=Math.floor((Math.min(a.x,b.x)-10)/64);x<=Math.floor((Math.max(a.x,b.x)+10)/64);x++)for(let z=Math.floor((Math.min(a.z,b.z)-10)/64);z<=Math.floor((Math.max(a.z,b.z)+10)/64);z++){const key=x+','+z;if(!cells.has(key))cells.set(key,[]);cells.get(key).push({a,b})}}
+export function scenicDistance(x,z){let best=Infinity;for(const {a,b}of cells.get(Math.floor(x/64)+','+Math.floor(z/64))||[]){const dx=b.x-a.x,dz=b.z-a.z,t=Math.max(0,Math.min(1,((x-a.x)*dx+(z-a.z)*dz)/(dx*dx+dz*dz))),d=Math.hypot(x-a.x-dx*t,z-a.z-dz*t);best=Math.min(best,d)}return best}
+export const COAST_PROPS=COAST_ROAD.filter((_,i)=>i>0&&i%14===0&&i<410).flatMap((p,j)=>{const i=(j+1)*14,a=COAST_ROAD[i-1],b=COAST_ROAD[i+1],angle=Math.atan2(b.x-a.x,b.z-a.z),dx=Math.cos(angle)*11,dz=-Math.sin(angle)*11;return[{id:'coast-palm-'+j,kind:'coastPalm',x:p.x+dx,z:p.z+dz,w:.65,d:.65,h:7},{id:'coast-rock-'+j,kind:'coastRock',x:p.x-dx*1.2,z:p.z-dz*1.2,w:2.8,d:2.8,h:2.2}]});

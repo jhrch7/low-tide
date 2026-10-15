@@ -1,0 +1,1 @@
+export function frameAdvice(b,dt,level){if(!Number.isFinite(dt)||dt<=0||dt>.25)return null;b.age=(b.age||0)+dt;if(b.age<5)return null;b.total=(b.total||0)+dt;b.frames=(b.frames||0)+1;if(b.total<3)return null;const mean=b.total/b.frames;b.total=b.frames=0;if(mean>.033&&level==='balanced')return 'performance';if(mean>.025&&level==='high')return 'balanced';return null}

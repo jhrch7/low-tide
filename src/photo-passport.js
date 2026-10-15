@@ -1,0 +1,4 @@
+import {player,distance,toast} from './core.js';
+export const PHOTO_PLACES=[{id:'old',name:'The family workshop',x:-285,z:-128},{id:'port',name:'Working harbour',x:-400,z:340},{id:'beach',name:'Bahía motor club',x:160,z:950},{id:'works',name:'Cinder skyline',x:530,z:280},{id:'ridge',name:'The trust’s ridge',x:0,z:-540},{id:'forest',name:'Green Ridge',x:-560,z:-665},{id:'marsh',name:'Salt Marsh boardwalk',x:-700,z:610},{id:'north',name:'The first light',x:780,z:-578}];
+export function photoPlace(s){return !s.interior?PHOTO_PLACES.find(p=>distance(player(s),p)<100):null}
+export function recordPhoto(s){s.photos??={places:[],shots:0};s.photos.shots++;const place=photoPlace(s);if(!place||s.photos.places.includes(place.id))return{place,pay:0};s.photos.places.push(place.id);const pay=120+(s.photos.places.length===PHOTO_PLACES.length?800:0);s.cash+=pay;toast(s,`${place.name} photographed · $${pay}`);return{place,pay}}
