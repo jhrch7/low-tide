@@ -59,7 +59,7 @@ export async function loadActors(view){
 export function actor(view,variant){
  const root=clone(view.actorTemplates[variant].scene),height=fit(root),g=new T.Group();g.add(root);root.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;o.frustumCulled=false}});
  const mixer=new T.AnimationMixer(root),actions=Object.fromEntries(view.actorClips[variant].map(c=>[c.name,mixer.clipAction(c)])),rigs=rigGroups(root),primary=rigs[0],boneMap=new Map(rigs.flatMap(r=>r.skeleton.bones).map(b=>[baseName(b.name),b]));
- g.userData={mixer,actions,root,defaultRootY:root.position.y,current:'Idle',variant,sourceHeight:height,scale:root.scale.x,rigs,boneMap};root.updateMatrixWorld(true);
+ g.userData={mixer,actions,root,defaultRootY:root.position.y,current:'Idle',variant,sourceHeight:height,scale:root.scale.x,rigs,boneMap,restBones:new Map(rigs.flatMap(r=>r.skeleton.bones).map(b=>[b,b.quaternion.clone()]))};root.updateMatrixWorld(true);
  const hand=boneMap.get('mixamorigRightHand');
  if(hand){
   const gun=new T.Group(),metal=new T.MeshStandardMaterial({color:0x30383c,metalness:.7,roughness:.35}),barrel=new T.Mesh(new T.BoxGeometry(.07,.11,.3),metal),grip=new T.Mesh(new T.BoxGeometry(.06,.14,.08),metal);barrel.position.z=.1;grip.position.y=-.1;gun.add(barrel,grip);

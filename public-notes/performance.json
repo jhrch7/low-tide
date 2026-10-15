@@ -1,0 +1,48 @@
+[
+  {
+    "sourceHash": "ae130a438699a3a877e2169f067cc272e870b718c8ae59ff50eb573328dec7fb",
+    "viewport": "1280x800 desktop",
+    "environment": "Chrome headless, native Apple M2 Metal. rAF intervals and CPU submission are not GPU timing or physical-phone FPS.",
+    "quality": "high",
+    "durationMs": 6016.4,
+    "observedRafPerSecond": 59.33780998603817,
+    "viewCpuSubmissionMs": {
+      "count": 358,
+      "mean": 4.612290490272991,
+      "median": 4.200000286102295,
+      "p95": 6.899999618530273
+    },
+    "frameIntervalsMs": {
+      "count": 357,
+      "mean": 16.85266106442577,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272
+    },
+    "drawCalls": 454,
+    "triangles": 397763,
+    "errors": []
+  },
+  {
+    "sourceHash": "ae130a438699a3a877e2169f067cc272e870b718c8ae59ff50eb573328dec7fb",
+    "viewport": "844x390 touch emulation",
+    "environment": "Chrome headless, native Apple M2 Metal. rAF intervals and CPU submission are not GPU timing or physical-phone FPS.",
+    "quality": "balanced",
+    "durationMs": 6016.4,
+    "observedRafPerSecond": 59.50402233894023,
+    "viewCpuSubmissionMs": {
+      "count": 359,
+      "mean": 4.145960996409976,
+      "median": 3.9000000953674316,
+      "p95": 5.900000095367432
+    },
+    "frameIntervalsMs": {
+      "count": 358,
+      "mean": 16.80558659217877,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728
+    },
+    "drawCalls": 315,
+    "triangles": 358235,
+    "errors": []
+  }
+]

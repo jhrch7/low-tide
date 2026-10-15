@@ -1,9 +1,9 @@
 {
   "game": "Low Tide",
-  "buildId": "a3123626d8b94897",
-  "sourceFingerprint": "a3123626d8b948979628b48616da575c4f71e952333e031e78bc33bb42ba614c",
-  "completedPasses": 98,
-  "builtAt": "2026-10-15T23:21:30.776Z",
+  "buildId": "b68908932d491f03",
+  "sourceFingerprint": "b68908932d491f0395922a1ce325ebc514e4d0334c8567bbe2f3e72fee55e6a4",
+  "completedPasses": 100,
+  "builtAt": "2026-10-15T23:45:49.125Z",
   "content": {
     "missions": 48,
     "interiors": 40,
@@ -139,9 +139,59 @@
       "sha256": "1a8b78d19c101e0dbb4202e0f99c15f443c7b05033399309a7dda521910f709b"
     },
     {
+      "path": "production.html",
+      "bytes": 16448,
+      "sha256": "376fc592053f4118baf8e6c217fcd60e1ab5028d038b15d178d39c976968de3a"
+    },
+    {
+      "path": "public-notes/aid.jpg",
+      "bytes": 252484,
+      "sha256": "0527c611a5f8f7850b822e958fdcb187d6fabc0d6d6bab78d9c9bf72b760b556"
+    },
+    {
+      "path": "public-notes/archive.jpg",
+      "bytes": 131473,
+      "sha256": "b7d9595536b800ed8cdd15a9bd862c6bf1bd216c04911fe0e80107292ba404f2"
+    },
+    {
+      "path": "public-notes/car-meet.jpg",
+      "bytes": 102487,
+      "sha256": "39c81e72457cc9844087aadcde9defef788e62feb0625f17a6509133ca8d014e"
+    },
+    {
+      "path": "public-notes/content-inventory.json",
+      "bytes": 64291,
+      "sha256": "6afeec39592bc2c30840493ef5f658c5298089d7600fa4ac4a3dc055eb56e901"
+    },
+    {
+      "path": "public-notes/first-pass.png",
+      "bytes": 158321,
+      "sha256": "ab09536ab2cc83591726936fd4674f19af44ff51882013d745871c5e6b42a85f"
+    },
+    {
+      "path": "public-notes/nico-opening.png",
+      "bytes": 925222,
+      "sha256": "f45a512ba923b2ac5c9c1ee442bfac11916625e982020ba720d4d74ab94339a7"
+    },
+    {
+      "path": "public-notes/passes.json",
+      "bytes": 122998,
+      "sha256": "0e7ccee3d0ea0404af241b60d248cbe96b608edd8477f0e698428d2beb8bc577"
+    },
+    {
+      "path": "public-notes/performance.json",
+      "bytes": 1488,
+      "sha256": "e58c973fb15148c0381512ef567258c99a3b0458504bb85f845033b26b92776f"
+    },
+    {
+      "path": "public-notes/road.jpg",
+      "bytes": 218235,
+      "sha256": "7a277a35badf552f5552648c2d74460d255b956b3c84779e24e9ff55f20a0424"
+    },
+    {
       "path": "README.txt",
-      "bytes": 2551,
-      "sha256": "0e6d9da44bc6c41644635f60b0433c277eec2ac2969aa8c08cf975645f6a41c2"
+      "bytes": 2845,
+      "sha256": "cfcc6a5dac4b3daec5ff9d88cdb8b28c5057879a7fa22900e5999cb9ccc0afe1"
     },
     {
       "path": "run.mjs",
@@ -150,8 +200,8 @@
     },
     {
       "path": "src/actors.js",
-      "bytes": 10889,
-      "sha256": "aa0e689432d7c38151c487fa6ca12ac427f443ec02211833cc6cd1cdc022cbee"
+      "bytes": 10975,
+      "sha256": "c5c5f26f2fe51b1ffafa94e9fee809689dac00add087e732c394d511894f803d"
     },
     {
       "path": "src/aid.js",
@@ -196,7 +246,7 @@
     {
       "path": "src/build-mode.js",
       "bytes": 72,
-      "sha256": "645c580d17924b6266f9d58a857926464a8edb7c9c1d1802fc15df1a43ba833d"
+      "sha256": "cb9be93d2f85f043b7be673c2a4db6a4d1853cae1f0315a7eaa35a62b6ed484b"
     },
     {
       "path": "src/business.js",
@@ -240,8 +290,8 @@
     },
     {
       "path": "src/core.js",
-      "bytes": 9375,
-      "sha256": "2cd574acc86dee227babf1b517b9960b0b067509d7c8e2af981e7c2b86bf9258"
+      "bytes": 9377,
+      "sha256": "967dda3d2cb61cf5f70806844e61325064116066cbca056de440eecd0dad2c94"
     },
     {
       "path": "src/detailed-cars.js",
@@ -365,8 +415,8 @@
     },
     {
       "path": "src/main.js",
-      "bytes": 32210,
-      "sha256": "f09593ba9f517b808d0c0cc26786a2769f8110c4dc0a1c7ccf4db54a7f69a86d"
+      "bytes": 32237,
+      "sha256": "075ffad5e15476a49d3cf5b07069b1ed88654e40cb91e70a3a13325e3b2f8878"
     },
     {
       "path": "src/map.js",
@@ -405,8 +455,8 @@
     },
     {
       "path": "src/offline.js",
-      "bytes": 3437,
-      "sha256": "09e7414cb4d8e0085f63d3b1ff21ed375c50bc115657e3d25939d5dee215af40"
+      "bytes": 4069,
+      "sha256": "169be51e660c88e02f31398db5fefc786b145544cddf4be8c61421367f30ca55"
     },
     {
       "path": "src/partners.js",
@@ -525,8 +575,8 @@
     },
     {
       "path": "src/share.js",
-      "bytes": 1114,
-      "sha256": "8d008ec497f2ac8496fa9ec0d513faad8d6643ee7bf80ea3937f245189452a3e"
+      "bytes": 1229,
+      "sha256": "bf54bfc81997e0388f6277b499cbce6be8541a8145bca70673c4795ee6248ac3"
     },
     {
       "path": "src/signals.js",
@@ -535,13 +585,13 @@
     },
     {
       "path": "src/sky.js",
-      "bytes": 4364,
-      "sha256": "52f6d44b6518ed72928c1339aabbed4f251a04483e0ee3ac6cafb3a33158bac9"
+      "bytes": 4365,
+      "sha256": "cd31be947763972c7df68f889e6e3d73365dff212e5f057ef47650f788057e32"
     },
     {
       "path": "src/social-view.js",
-      "bytes": 2304,
-      "sha256": "9a7b933a491b62ba81a2bef71442fb54a009b14cb8f7b28fd12ecde1e259203d"
+      "bytes": 2540,
+      "sha256": "875d65ae7526c231bd10bcf79fce7c6d276741ca3242a37d999851ea82c487fd"
     },
     {
       "path": "src/stealth.js",
@@ -645,8 +695,8 @@
     },
     {
       "path": "sw.js",
-      "bytes": 2536,
-      "sha256": "e47fe3d58e027f00ead67b5da3ba29068e219fa7ef22a8b8f15186c2e90e8e01"
+      "bytes": 3285,
+      "sha256": "2ba8f40e11adf0ed89062e14f58630b07ec2de2e56839f8e706da01baa460be4"
     },
     {
       "path": "vendor/BufferGeometryUtils.js",

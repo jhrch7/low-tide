@@ -1,0 +1,2795 @@
+{
+  "completedPasses": 100,
+  "world": {
+    "districts": [
+      {
+        "id": "port",
+        "name": "Port Sol",
+        "x": -320,
+        "z": 180,
+        "color": 11450552,
+        "description": "Union docks. Salt, diesel and old debts."
+      },
+      {
+        "id": "old",
+        "name": "Old Quarter",
+        "x": -320,
+        "z": -180,
+        "color": 14732209,
+        "description": "Limestone lanes beneath the cathedral."
+      },
+      {
+        "id": "beach",
+        "name": "Playa Azul",
+        "x": 160,
+        "z": 540,
+        "color": 15913916,
+        "description": "Beach clubs, tourists and borrowed money."
+      },
+      {
+        "id": "works",
+        "name": "Cinder Works",
+        "x": 480,
+        "z": 180,
+        "color": 9018267,
+        "description": "Warehouses and the island’s night shift."
+      },
+      {
+        "id": "ridge",
+        "name": "Mirador",
+        "x": 0,
+        "z": -540,
+        "color": 14802128,
+        "description": "Gated fortunes overlooking the port."
+      },
+      {
+        "id": "marsh",
+        "name": "Salt Marsh",
+        "x": -640,
+        "z": 540,
+        "color": 9936504,
+        "description": "A coast that hides what the tide gives back."
+      },
+      {
+        "id": "forest",
+        "name": "Sierra Verde",
+        "x": -480,
+        "z": -720,
+        "color": 10858123,
+        "description": "Pine roads, quarry cuts and radio shadows."
+      },
+      {
+        "id": "north",
+        "name": "Northlight",
+        "x": 640,
+        "z": -540,
+        "color": 13223605,
+        "description": "Airstrip, lighthouse and the edge of the island."
+      }
+    ],
+    "exteriorBuildings": 128,
+    "nominalExtent": "Approximately 2.3 by 2.0 km; playable terrain is not a real surveyed island."
+  },
+  "missions": [
+    {
+      "id": "j01",
+      "title": "The Tool Chest",
+      "actor": "both",
+      "chapter": 1,
+      "requires": [
+        "m02",
+        "n02"
+      ],
+      "reward": 1200,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "vale",
+          "text": "As Mara, open the tool chest with Nico."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico to read the cipher on his old badge."
+        },
+        {
+          "kind": "inspect",
+          "location": "vale",
+          "text": "Read the witness list hidden under the false floor."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara for the getaway."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": 180
+          },
+          "text": "Drive to the waterfront rendezvous. Nico will intercept the radio call."
+        },
+        {
+          "kind": "wait",
+          "location": {
+            "x": -320,
+            "z": 180
+          },
+          "text": "Stay at the rendezvous while Nico listens."
+        },
+        {
+          "kind": "talk",
+          "location": "cafe",
+          "text": "Tell Ines what your father was protecting."
+        }
+      ]
+    },
+    {
+      "id": "j02",
+      "title": "Glasshouse",
+      "actor": "both",
+      "chapter": 1,
+      "requires": [
+        "m04",
+        "n04"
+      ],
+      "reward": 1800,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "azul_club",
+          "text": "As Mara, get Leila’s service entrance invitation."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico to search the service records."
+        },
+        {
+          "kind": "inspect",
+          "location": "hotel",
+          "text": "Copy the guest transfer order from the hotel cabinet."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara for the road out."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": -180
+          },
+          "text": "Return to Old Quarter. Nico will follow with the original."
+        },
+        {
+          "kind": "talk",
+          "location": "vale",
+          "text": "Reconcile the recording and the witness transfer."
+        }
+      ]
+    },
+    {
+      "id": "m01",
+      "title": "Salt in the Engine",
+      "actor": "mara",
+      "chapter": 1,
+      "requires": [],
+      "reward": 450,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "cafe",
+          "text": "Meet Aunt Ines at Café Lucero."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": 180
+          },
+          "text": "Take the Solano to Port Sol."
+        },
+        {
+          "kind": "inspect",
+          "location": {
+            "x": -335,
+            "z": 170
+          },
+          "text": "Collect Rafi’s water-stained envelope."
+        },
+        {
+          "kind": "deliver",
+          "location": "vale",
+          "text": "Bring the envelope into Vale Motors."
+        }
+      ]
+    },
+    {
+      "id": "m02",
+      "title": "After the Last Ferry",
+      "actor": "mara",
+      "chapter": 1,
+      "requires": [
+        "m01"
+      ],
+      "reward": 700,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "union",
+          "text": "Ask Sora about the missing medical shipment."
+        },
+        {
+          "kind": "inspect",
+          "location": "bonded",
+          "text": "Find the unmarked medical crate."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": 235
+          },
+          "text": "Drive the crate to Santa Clara’s rear gate."
+        },
+        {
+          "kind": "escape",
+          "text": "Lose the patrols without leading them back to the clinic."
+        },
+        {
+          "kind": "deliver",
+          "location": "clinic",
+          "text": "Give Dr. Celia the shipment."
+        }
+      ]
+    },
+    {
+      "id": "m03",
+      "title": "The Wrong Guest",
+      "actor": "mara",
+      "chapter": 1,
+      "requires": [
+        "j01"
+      ],
+      "reward": 900,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "azul_club",
+          "text": "Meet Leila in Mariposa’s back room."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 205,
+            "z": 555
+          },
+          "text": "Drive to Hotel Maravilla without drawing a patrol."
+        },
+        {
+          "kind": "inspect",
+          "location": "hotel",
+          "text": "Copy the service-hall guest register beside the right-hand cabinet."
+        },
+        {
+          "kind": "deliver",
+          "location": "customs",
+          "text": "Bring Nico the copied registration."
+        }
+      ]
+    },
+    {
+      "id": "m04",
+      "title": "A Fast Exit",
+      "actor": "mara",
+      "chapter": 1,
+      "requires": [
+        "m03"
+      ],
+      "reward": 1300,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "hotel",
+          "text": "Ask the night porter when the courier is leaving."
+        },
+        {
+          "kind": "getcar",
+          "location": {
+            "x": 245,
+            "z": 565
+          },
+          "text": "Take the courier’s Azul GT from the rear parking bay."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 320,
+            "z": 180
+          },
+          "text": "Get the footage out of Playa Azul before the checkpoint closes."
+        },
+        {
+          "kind": "escape",
+          "text": "Lose the patrols. Do not lead them to Leila."
+        },
+        {
+          "kind": "deliver",
+          "location": "azul_club",
+          "text": "Give Leila the camera card."
+        }
+      ]
+    },
+    {
+      "id": "n01",
+      "title": "The Returned Badge",
+      "actor": "nico",
+      "chapter": 1,
+      "requires": [],
+      "reward": 400,
+      "steps": [
+        {
+          "kind": "inspect",
+          "location": {
+            "x": -335,
+            "z": 170
+          },
+          "text": "Inspect the abandoned diver’s bag."
+        },
+        {
+          "kind": "talk",
+          "location": "archive",
+          "text": "Ask Alma at the Municipal Archive about the permit."
+        },
+        {
+          "kind": "inspect",
+          "location": "archive",
+          "text": "Read the amended dredging permit."
+        },
+        {
+          "kind": "talk",
+          "location": "vale",
+          "text": "Find Mara at Vale Motors."
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "title": "Ink That Runs",
+      "actor": "nico",
+      "chapter": 1,
+      "requires": [
+        "n01"
+      ],
+      "reward": 650,
+      "steps": [
+        {
+          "kind": "inspect",
+          "location": "customs",
+          "text": "Copy the duplicate shipping register."
+        },
+        {
+          "kind": "reach",
+          "location": {
+            "x": -415,
+            "z": 285
+          },
+          "text": "Walk to the customs observation point."
+        },
+        {
+          "kind": "wait",
+          "location": {
+            "x": -415,
+            "z": 285
+          },
+          "text": "Watch the container yard through one unloading cycle."
+        },
+        {
+          "kind": "talk",
+          "location": "union",
+          "text": "Ask Sora who worked the midnight shift."
+        },
+        {
+          "kind": "deliver",
+          "location": "archive",
+          "text": "Give Alma a copy of the register."
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "title": "Room 314",
+      "actor": "nico",
+      "chapter": 1,
+      "requires": [
+        "j01"
+      ],
+      "reward": 850,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "hotel",
+          "text": "Ask the porter about the sealed room."
+        },
+        {
+          "kind": "inspect",
+          "location": "hotel",
+          "text": "Search the laundry cabinet at the back right of the room."
+        },
+        {
+          "kind": "talk",
+          "location": "dive",
+          "text": "Ask Blue Current who treated a cut hand."
+        },
+        {
+          "kind": "deliver",
+          "location": "archive",
+          "text": "Record Ellin’s name in Alma’s duplicate file."
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "title": "What the Tide Kept",
+      "actor": "nico",
+      "chapter": 1,
+      "requires": [
+        "n03"
+      ],
+      "reward": 1050,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "dive",
+          "text": "Get Ivo’s coordinates for the damaged buoy."
+        },
+        {
+          "kind": "reach",
+          "location": {
+            "x": 160,
+            "z": 760
+          },
+          "text": "Reach the beach survey marker."
+        },
+        {
+          "kind": "inspect",
+          "location": {
+            "x": 160,
+            "z": 760
+          },
+          "text": "Recover the buoy’s recording unit."
+        },
+        {
+          "kind": "deliver",
+          "location": "customs",
+          "text": "Match the buoy’s date to the shipping log."
+        }
+      ]
+    },
+    {
+      "id": "j03",
+      "title": "Hold the Line",
+      "actor": "both",
+      "chapter": 2,
+      "requires": [
+        "m06",
+        "n06"
+      ],
+      "reward": 2100,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "union",
+          "text": "As Mara, plan the family’s departure with Sora."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico at the grid relay."
+        },
+        {
+          "kind": "interact",
+          "location": "power",
+          "text": "Open the relay and give Mara a window."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara for the family’s drive."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": -180
+          },
+          "text": "Bring the family’s vehicle to Old Quarter before the window closes."
+        },
+        {
+          "kind": "talk",
+          "location": "cafe",
+          "text": "Let Ines take the family upstairs."
+        }
+      ]
+    },
+    {
+      "id": "j04",
+      "title": "The Cinder Ledger",
+      "actor": "both",
+      "chapter": 2,
+      "requires": [
+        "j03"
+      ],
+      "reward": 2300,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "dispatch",
+          "text": "As Nico, get Teo’s machine access number."
+        },
+        {
+          "kind": "inspect",
+          "location": "foundry",
+          "text": "Copy the trust’s payment ledger."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara to clear the way out."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 480,
+            "z": 180
+          },
+          "text": "Clear the security crew from the extraction junction."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico with the copied ledger."
+        },
+        {
+          "kind": "deliver",
+          "location": "archive",
+          "text": "Give Alma the ledger and Ellin’s location."
+        }
+      ]
+    },
+    {
+      "id": "j05",
+      "title": "Northbound",
+      "actor": "both",
+      "chapter": 2,
+      "requires": [
+        "m08",
+        "n08"
+      ],
+      "reward": 2350,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "lodge",
+          "text": "As Mara, get Ellin ready to move."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico at the ridge radio."
+        },
+        {
+          "kind": "interact",
+          "location": "relay",
+          "text": "Broadcast Ellin’s identity on the emergency band."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara with the witness."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": -540
+          },
+          "text": "Bring Ellin to the ridge transfer junction."
+        },
+        {
+          "kind": "talk",
+          "location": "ranger",
+          "text": "Confirm the witness route with June."
+        }
+      ]
+    },
+    {
+      "id": "j06",
+      "title": "The Witness Road",
+      "actor": "both",
+      "chapter": 2,
+      "requires": [
+        "j05"
+      ],
+      "reward": 2500,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "ranger",
+          "text": "As Nico, get June’s final route warning."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": -500,
+            "z": -720
+          },
+          "text": "Clear the witness road’s private checkpoint."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara for the final descent."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": 180
+          },
+          "text": "Bring Ellin down to Port Sol."
+        },
+        {
+          "kind": "talk",
+          "location": "union",
+          "text": "Hand Ellin over to Sora in person."
+        }
+      ]
+    },
+    {
+      "id": "m05",
+      "title": "Shift Change",
+      "actor": "mara",
+      "chapter": 2,
+      "requires": [
+        "j02"
+      ],
+      "reward": 1200,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "dispatch",
+          "text": "Meet dispatcher Teo at Cinder Freight."
+        },
+        {
+          "kind": "interact",
+          "location": "power",
+          "text": "Copy the shift-change relay schedule."
+        },
+        {
+          "kind": "inspect",
+          "location": "foundry",
+          "text": "Check the crate beside the foundry cabinet."
+        },
+        {
+          "kind": "deliver",
+          "location": "diesel",
+          "text": "Leave the crate with the independent mechanics."
+        }
+      ]
+    },
+    {
+      "id": "m06",
+      "title": "Hot Metal",
+      "actor": "mara",
+      "chapter": 2,
+      "requires": [
+        "m05"
+      ],
+      "reward": 1650,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "diesel",
+          "text": "Get the order archive from Diesel."
+        },
+        {
+          "kind": "getcar",
+          "location": {
+            "x": 465,
+            "z": 180
+          },
+          "text": "Take the Cinder box truck."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 0,
+            "z": 180
+          },
+          "text": "Drive the order archive through the west checkpoint."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 0,
+            "z": 180
+          },
+          "text": "Stop Meridian’s road crew before they seize the truck."
+        },
+        {
+          "kind": "escape",
+          "text": "Leave the alerted patrols behind."
+        },
+        {
+          "kind": "deliver",
+          "location": "bonded",
+          "text": "Store the orders outside Meridian’s reach."
+        }
+      ]
+    },
+    {
+      "id": "m07",
+      "title": "Ranger Road",
+      "actor": "mara",
+      "chapter": 2,
+      "requires": [
+        "j04"
+      ],
+      "reward": 1500,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "ranger",
+          "text": "Ask ranger June about Pine House."
+        },
+        {
+          "kind": "getcar",
+          "location": {
+            "x": -640,
+            "z": -660
+          },
+          "text": "Take June’s loaned Sierra RS."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -640,
+            "z": -720
+          },
+          "text": "Bring the field medicine along the ridge road."
+        },
+        {
+          "kind": "talk",
+          "location": "lodge",
+          "text": "Meet Ellin at Pine House."
+        },
+        {
+          "kind": "deliver",
+          "location": "ranger",
+          "text": "Return June’s medical case."
+        }
+      ]
+    },
+    {
+      "id": "m08",
+      "title": "Stone and Water",
+      "actor": "mara",
+      "chapter": 2,
+      "requires": [
+        "m07"
+      ],
+      "reward": 1750,
+      "steps": [
+        {
+          "kind": "inspect",
+          "location": "quarry",
+          "text": "Locate the last outbound quarry invoice."
+        },
+        {
+          "kind": "getcar",
+          "location": {
+            "x": -470,
+            "z": -750
+          },
+          "text": "Take the abandoned quarry pickup."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -640,
+            "z": -540
+          },
+          "text": "Get the invoice down to the southern ridge junction."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": -640,
+            "z": -540
+          },
+          "text": "Clear Meridian’s recovery crew from the junction."
+        },
+        {
+          "kind": "deliver",
+          "location": "diesel",
+          "text": "Let Diesel verify the vehicle’s load record."
+        }
+      ]
+    },
+    {
+      "id": "n05",
+      "title": "Countersigned",
+      "actor": "nico",
+      "chapter": 2,
+      "requires": [
+        "j02"
+      ],
+      "reward": 1150,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "customs",
+          "text": "Get the original inspection stamp."
+        },
+        {
+          "kind": "inspect",
+          "location": "foundry",
+          "text": "Compare the demolition order with the customs stamp."
+        },
+        {
+          "kind": "wait",
+          "location": {
+            "x": 530,
+            "z": 180
+          },
+          "text": "Record the substation maintenance broadcast."
+        },
+        {
+          "kind": "deliver",
+          "location": "archive",
+          "text": "File the forgery evidence with Alma."
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "title": "Dead Air",
+      "actor": "nico",
+      "chapter": 2,
+      "requires": [
+        "n05"
+      ],
+      "reward": 1450,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "dispatch",
+          "text": "Collect Teo’s private-band receiver."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 530,
+            "z": 180
+          },
+          "text": "Keep Meridian’s collectors away from dispatch."
+        },
+        {
+          "kind": "inspect",
+          "location": "power",
+          "text": "Decode the relay’s stored channel list."
+        },
+        {
+          "kind": "deliver",
+          "location": "union",
+          "text": "Put Teo under the union’s protection."
+        }
+      ]
+    },
+    {
+      "id": "n07",
+      "title": "A Diver’s Hands",
+      "actor": "nico",
+      "chapter": 2,
+      "requires": [
+        "j04"
+      ],
+      "reward": 1350,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "lodge",
+          "text": "Hear Ellin’s account at Pine House."
+        },
+        {
+          "kind": "inspect",
+          "location": "lodge",
+          "text": "Photograph Ellin’s treatment notes."
+        },
+        {
+          "kind": "talk",
+          "location": "ranger",
+          "text": "Get June’s original rescue entry."
+        },
+        {
+          "kind": "deliver",
+          "location": "archive",
+          "text": "File the rescue entry beside the false death report."
+        }
+      ]
+    },
+    {
+      "id": "n08",
+      "title": "An Empty Quarry",
+      "actor": "nico",
+      "chapter": 2,
+      "requires": [
+        "n07"
+      ],
+      "reward": 1550,
+      "steps": [
+        {
+          "kind": "inspect",
+          "location": "quarry",
+          "text": "Compare the closed quarry books with the new invoice."
+        },
+        {
+          "kind": "reach",
+          "location": {
+            "x": -550,
+            "z": -840
+          },
+          "text": "Reach the old survey overlook."
+        },
+        {
+          "kind": "wait",
+          "location": {
+            "x": -550,
+            "z": -840
+          },
+          "text": "Record the relay’s automatic account call."
+        },
+        {
+          "kind": "inspect",
+          "location": "relay",
+          "text": "Trace the account call to its billing address."
+        }
+      ]
+    },
+    {
+      "id": "j07",
+      "title": "A Room Full of People",
+      "actor": "both",
+      "chapter": 3,
+      "requires": [
+        "m10",
+        "n10"
+      ],
+      "reward": 2850,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "gallery",
+          "text": "As Nico, enter the donor preview."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara outside the reception."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 0,
+            "z": -565
+          },
+          "text": "Keep Meridian’s retrieval team out of the gallery."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch back to Nico at the locked register."
+        },
+        {
+          "kind": "inspect",
+          "location": "gallery",
+          "text": "Use the copied access card and preserve the register."
+        },
+        {
+          "kind": "deliver",
+          "location": "lawyer",
+          "text": "Leave the recording and register in legal custody."
+        }
+      ]
+    },
+    {
+      "id": "j08",
+      "title": "The Price of Silence",
+      "actor": "both",
+      "chapter": 3,
+      "requires": [
+        "j07"
+      ],
+      "reward": 3000,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "lawyer",
+          "text": "As Nico, collect Serrano’s sealed evidence box."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 0,
+            "z": -455
+          },
+          "text": "Break the private security cordon below Mirador."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara for the coastal run."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 320,
+            "z": 540
+          },
+          "text": "Carry the evidence to the Playa Azul coast."
+        },
+        {
+          "kind": "deliver",
+          "location": "dive",
+          "text": "Entrust the survey trail to Gideon at Blue Current."
+        }
+      ]
+    },
+    {
+      "id": "m09",
+      "title": "Borrowed Money",
+      "actor": "mara",
+      "chapter": 3,
+      "requires": [
+        "j06"
+      ],
+      "reward": 1800,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "azul_club",
+          "text": "Ask Leila for a name on the Mirador guest list."
+        },
+        {
+          "kind": "talk",
+          "location": "bank",
+          "text": "Confront the bank’s private collector."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 0,
+            "z": -450
+          },
+          "text": "Stop the collectors outside the public banking lane."
+        },
+        {
+          "kind": "inspect",
+          "location": "bank",
+          "text": "Copy the collector’s routing receipt."
+        },
+        {
+          "kind": "deliver",
+          "location": "azul_club",
+          "text": "Bring Leila proof the collection office is compromised."
+        }
+      ]
+    },
+    {
+      "id": "m10",
+      "title": "A Collector’s Weekend",
+      "actor": "mara",
+      "chapter": 3,
+      "requires": [
+        "m09"
+      ],
+      "reward": 2100,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "villa",
+          "text": "Take the donor’s valet delivery order."
+        },
+        {
+          "kind": "getcar",
+          "text": "Collect the donor’s Ferrari 458."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 320,
+            "z": -540
+          },
+          "text": "Drive the Ferrari to the eastern handover."
+        },
+        {
+          "kind": "inspect",
+          "location": {
+            "x": 320,
+            "z": -540
+          },
+          "text": "Copy the card from the valet pouch."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 15,
+            "z": -565
+          },
+          "text": "Return the donor’s car to Casa Serrat."
+        },
+        {
+          "kind": "talk",
+          "location": "lawyer",
+          "text": "Leave the copied card with attorney Serrano."
+        }
+      ]
+    },
+    {
+      "id": "m11",
+      "title": "Low Water",
+      "actor": "mara",
+      "chapter": 3,
+      "requires": [
+        "j08"
+      ],
+      "reward": 2100,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "boathouse",
+          "text": "Ask Gideon to guide you through Salt Marsh."
+        },
+        {
+          "kind": "getcar",
+          "text": "Collect the community’s Llano van."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -640,
+            "z": 490
+          },
+          "text": "Collect the fishers’ families at the market road."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -590,
+            "z": 610
+          },
+          "text": "Bring the families and dry records to Santa Marea."
+        },
+        {
+          "kind": "talk",
+          "location": "chapel",
+          "text": "Check the families into the refuge."
+        }
+      ]
+    },
+    {
+      "id": "m12",
+      "title": "Old Debts",
+      "actor": "mara",
+      "chapter": 3,
+      "requires": [
+        "m11"
+      ],
+      "reward": 2300,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "fishery",
+          "text": "Make Rafi explain the debt he bought."
+        },
+        {
+          "kind": "inspect",
+          "location": "boathouse",
+          "text": "Read Rafi’s original debt transfer."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": -640,
+            "z": 580
+          },
+          "text": "Keep Meridian’s eviction crew away from the refuge."
+        },
+        {
+          "kind": "talk",
+          "location": "chapel",
+          "text": "Let the families decide whether Rafi can help."
+        }
+      ]
+    },
+    {
+      "id": "n09",
+      "title": "The Foundation",
+      "actor": "nico",
+      "chapter": 3,
+      "requires": [
+        "j06"
+      ],
+      "reward": 1650,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "lawyer",
+          "text": "Ask Serrano to challenge the coastal transfer."
+        },
+        {
+          "kind": "inspect",
+          "location": "gallery",
+          "text": "Photograph the foundation’s first donor notice."
+        },
+        {
+          "kind": "inspect",
+          "location": "archive",
+          "text": "Compare the sole resident’s name with the death register."
+        },
+        {
+          "kind": "deliver",
+          "location": "lawyer",
+          "text": "Submit the false hearing notice and death entry."
+        }
+      ]
+    },
+    {
+      "id": "n10",
+      "title": "Whose Island",
+      "actor": "nico",
+      "chapter": 3,
+      "requires": [
+        "n09"
+      ],
+      "reward": 1900,
+      "steps": [
+        {
+          "kind": "inspect",
+          "location": "bank",
+          "text": "Read the account’s scheduled collection time."
+        },
+        {
+          "kind": "reach",
+          "location": {
+            "x": 180,
+            "z": -540
+          },
+          "text": "Reach the east-road observation point."
+        },
+        {
+          "kind": "wait",
+          "location": {
+            "x": 180,
+            "z": -540
+          },
+          "text": "Record the courier’s departure on the quiet road."
+        },
+        {
+          "kind": "inspect",
+          "location": "gallery",
+          "text": "Match the courier reference to a marshland company."
+        },
+        {
+          "kind": "talk",
+          "location": "lawyer",
+          "text": "Ask Serrano how to preserve the original survey."
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "title": "Borderline",
+      "actor": "nico",
+      "chapter": 3,
+      "requires": [
+        "j08"
+      ],
+      "reward": 1900,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "survey",
+          "text": "Ask surveyor Ada for the unamended coast map."
+        },
+        {
+          "kind": "inspect",
+          "location": {
+            "x": -640,
+            "z": 630
+          },
+          "text": "Photograph the first brass boundary post."
+        },
+        {
+          "kind": "inspect",
+          "location": {
+            "x": -640,
+            "z": 705
+          },
+          "text": "Photograph the boardwalk’s original survey marker."
+        },
+        {
+          "kind": "deliver",
+          "location": "survey",
+          "text": "Match the physical markers to Ada’s field book."
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "title": "False Tide",
+      "actor": "nico",
+      "chapter": 3,
+      "requires": [
+        "n11"
+      ],
+      "reward": 2150,
+      "steps": [
+        {
+          "kind": "inspect",
+          "location": "survey",
+          "text": "Read the station’s original tide chart."
+        },
+        {
+          "kind": "talk",
+          "location": "fishery",
+          "text": "Ask who saw the supposed rescue convoy."
+        },
+        {
+          "kind": "inspect",
+          "location": "customs",
+          "text": "Compare the convoy with the airfreight register."
+        },
+        {
+          "kind": "deliver",
+          "location": "lawyer",
+          "text": "Put the tide report and charter in Serrano’s custody."
+        }
+      ]
+    },
+    {
+      "id": "j09",
+      "title": "A Tide of People",
+      "actor": "both",
+      "chapter": 4,
+      "requires": [
+        "m12",
+        "n12"
+      ],
+      "reward": 3200,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "survey",
+          "text": "As Nico, collect Ada’s signed originals."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara at the refuge road."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": -640,
+            "z": 580
+          },
+          "text": "Hold the refuge road against the clearance team."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico with the signed survey."
+        },
+        {
+          "kind": "interact",
+          "location": "relay",
+          "text": "Send the survey on the emergency archive channel."
+        },
+        {
+          "kind": "talk",
+          "location": "chapel",
+          "text": "Tell Ada the coast is on the public record."
+        }
+      ]
+    },
+    {
+      "id": "j10",
+      "title": "The Last Deed",
+      "actor": "both",
+      "chapter": 4,
+      "requires": [
+        "j09"
+      ],
+      "reward": 3400,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "boathouse",
+          "text": "As Mara, take Gideon’s message for the Northlight mechanic."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico at the field station."
+        },
+        {
+          "kind": "inspect",
+          "location": "survey",
+          "text": "Preserve the airstrip’s old public right of way."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": -640,
+            "z": 540
+          },
+          "text": "Open the blocked coast junction."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara for the Northlight approach."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 640,
+            "z": -540
+          },
+          "text": "Reach Northlight before the freight charter leaves."
+        }
+      ]
+    },
+    {
+      "id": "m13",
+      "title": "Grounded",
+      "actor": "mara",
+      "chapter": 4,
+      "requires": [
+        "j10"
+      ],
+      "reward": 2400,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "hangar",
+          "text": "Ask Vera to stop the Northlight charter."
+        },
+        {
+          "kind": "inspect",
+          "location": "dispatch",
+          "text": "Recover Vera’s replacement fuel regulator."
+        },
+        {
+          "kind": "deliver",
+          "location": "hangar",
+          "text": "Give Vera the regulator and charter number."
+        },
+        {
+          "kind": "interact",
+          "location": {
+            "x": 610,
+            "z": -655
+          },
+          "text": "Help Vera isolate the grounded aircraft’s fuel system."
+        }
+      ]
+    },
+    {
+      "id": "m14",
+      "title": "Against the Wind",
+      "actor": "mara",
+      "chapter": 4,
+      "requires": [
+        "m13"
+      ],
+      "reward": 2600,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "tower",
+          "text": "Get Voss’s message from the controller."
+        },
+        {
+          "kind": "getcar",
+          "text": "Take the controller’s Albatros estate."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 780,
+            "z": -570
+          },
+          "text": "Carry the mechanic along the lighthouse road."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 750,
+            "z": -570
+          },
+          "text": "Keep the retrieval team away from the keeper’s road."
+        },
+        {
+          "kind": "talk",
+          "location": "lighthouse",
+          "text": "Hand the mechanic over to the keeper."
+        }
+      ]
+    },
+    {
+      "id": "n13",
+      "title": "A Silent Tower",
+      "actor": "nico",
+      "chapter": 4,
+      "requires": [
+        "j10"
+      ],
+      "reward": 2200,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "tower",
+          "text": "Ask the controller about the silent freight charter."
+        },
+        {
+          "kind": "inspect",
+          "location": "tower",
+          "text": "Preserve the controller’s signed paper log."
+        },
+        {
+          "kind": "reach",
+          "location": {
+            "x": 610,
+            "z": -730
+          },
+          "text": "Reach the old runway timing marker."
+        },
+        {
+          "kind": "wait",
+          "location": {
+            "x": 610,
+            "z": -730
+          },
+          "text": "Match the runway timer to the recorded landing interval."
+        },
+        {
+          "kind": "inspect",
+          "location": "terminal",
+          "text": "Match the interval to the trust’s cargo docket."
+        }
+      ]
+    },
+    {
+      "id": "n14",
+      "title": "What Elias Said",
+      "actor": "nico",
+      "chapter": 4,
+      "requires": [
+        "n13"
+      ],
+      "reward": 2400,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "lighthouse",
+          "text": "Ask the keeper for Elias’s last recording."
+        },
+        {
+          "kind": "inspect",
+          "location": "lighthouse",
+          "text": "Listen to the complete recording."
+        },
+        {
+          "kind": "deliver",
+          "location": "lawyer",
+          "text": "File the confession with the rest of the evidence."
+        },
+        {
+          "kind": "talk",
+          "location": "vale",
+          "text": "Tell Mara what their father actually said."
+        }
+      ]
+    },
+    {
+      "id": "j11",
+      "title": "Last Departure",
+      "actor": "both",
+      "chapter": 5,
+      "requires": [
+        "m14",
+        "n14"
+      ],
+      "reward": 4200,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "hangar",
+          "text": "As Mara, confirm the aircraft is safely grounded."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 610,
+            "z": -655
+          },
+          "text": "Defend the grounded plane from Meridian’s extraction crew."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico at the freight terminal."
+        },
+        {
+          "kind": "talk",
+          "location": "terminal",
+          "text": "Take Captain Voss’s signed witness statement."
+        },
+        {
+          "kind": "inspect",
+          "location": "terminal",
+          "text": "Seal the original demolition authorization."
+        },
+        {
+          "kind": "deliver",
+          "location": "lawyer",
+          "text": "Put the complete case into Serrano’s custody."
+        }
+      ]
+    },
+    {
+      "id": "j12",
+      "title": "The Island Keeps Your Name",
+      "actor": "both",
+      "chapter": 5,
+      "requires": [
+        "j11"
+      ],
+      "reward": 7000,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "lawyer",
+          "text": "As Nico, hear Serrano’s final terms."
+        },
+        {
+          "kind": "deliver",
+          "location": "archive",
+          "text": "Leave one sealed duplicate with Alma."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara for the drive to the light."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 780,
+            "z": -570
+          },
+          "text": "Take the coastal road to the lighthouse."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico at the lighthouse."
+        },
+        {
+          "kind": "choice",
+          "location": "lighthouse",
+          "text": "With Mara, decide what the Vale name will mean."
+        }
+      ]
+    },
+    {
+      "id": "j13",
+      "title": "The Next Shift",
+      "actor": "both",
+      "chapter": 6,
+      "requires": [
+        "m15",
+        "n15"
+      ],
+      "reward": 3200,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "transport",
+          "text": "As Nico, hear the drivers at Island Line."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara beside the dispatch house."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 640,
+            "z": 540
+          },
+          "text": "Take a vehicle to the eastern pickup."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico to clear the return service."
+        },
+        {
+          "kind": "interact",
+          "location": "transport",
+          "text": "Sign the public return timetable."
+        },
+        {
+          "kind": "switch",
+          "text": "Return to Mara at the eastern pickup."
+        },
+        {
+          "kind": "deliver",
+          "location": "fishery",
+          "text": "Bring the first shift’s pay packet to La Sal."
+        }
+      ]
+    },
+    {
+      "id": "j14",
+      "title": "No Empty Seats",
+      "actor": "both",
+      "chapter": 6,
+      "requires": [
+        "m16",
+        "n16"
+      ],
+      "reward": 3500,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "shelter",
+          "text": "As Mara, warn the family at San Telmo."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico at the Northlight annex."
+        },
+        {
+          "kind": "inspect",
+          "location": "annex",
+          "text": "Check the collectors’ claimed order."
+        },
+        {
+          "kind": "fight",
+          "location": {
+            "x": 735,
+            "z": -420
+          },
+          "text": "Stop the armed collectors outside Northlight."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara with the family at San Telmo."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -640,
+            "z": -540
+          },
+          "text": "Bring a vehicle down the ridge."
+        },
+        {
+          "kind": "deliver",
+          "location": "chapel",
+          "text": "Leave the family with Sister Sol."
+        }
+      ]
+    },
+    {
+      "id": "j15",
+      "title": "The Tide’s New Rules",
+      "actor": "both",
+      "chapter": 6,
+      "requires": [
+        "j13",
+        "j14"
+      ],
+      "reward": 3800,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "boathouse",
+          "text": "As Mara, accept Gideon’s trial charter."
+        },
+        {
+          "kind": "getcar",
+          "text": "Take the charter launch beside the port dock."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -420,
+            "z": 820
+          },
+          "text": "Follow the channel to the outer marker, then stop."
+        },
+        {
+          "kind": "switch",
+          "text": "Moor the launch and switch to Nico at Radio Sal."
+        },
+        {
+          "kind": "interact",
+          "location": "radio",
+          "text": "Register the return call on the public band."
+        },
+        {
+          "kind": "switch",
+          "text": "Return to Mara at the moored launch."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -440,
+            "z": 398
+          },
+          "text": "Reboard the charter launch and return to the dock."
+        },
+        {
+          "kind": "deliver",
+          "location": "boathouse",
+          "text": "Give Gideon the signed public route card."
+        }
+      ]
+    },
+    {
+      "id": "m15",
+      "title": "A Straight Road",
+      "actor": "mara",
+      "chapter": 6,
+      "requires": [
+        "j12"
+      ],
+      "reward": 2100,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "wreckers",
+          "text": "Ask Berto about the unclaimed car."
+        },
+        {
+          "kind": "getcar",
+          "text": "Take the recovered Brisa from the yard."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": 180
+          },
+          "text": "Show the owner the car at Port Sol."
+        },
+        {
+          "kind": "deliver",
+          "location": "annex",
+          "text": "Leave the recovered registration with the desk sergeant."
+        }
+      ]
+    },
+    {
+      "id": "m16",
+      "title": "Where the Road Bends",
+      "actor": "mara",
+      "chapter": 6,
+      "requires": [
+        "m15"
+      ],
+      "reward": 2400,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "range",
+          "text": "Collect June’s sealed supply list."
+        },
+        {
+          "kind": "getcar",
+          "text": "Take June’s Sierra RS."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 960,
+            "z": 100
+          },
+          "text": "Take La Costa’s eastern bend."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": 810,
+            "z": -680
+          },
+          "text": "Follow the coast road past Northlight."
+        },
+        {
+          "kind": "deliver",
+          "location": "shelter",
+          "text": "Deliver the supplies inside San Telmo."
+        }
+      ]
+    },
+    {
+      "id": "n15",
+      "title": "A Copy for Everyone",
+      "actor": "nico",
+      "chapter": 6,
+      "requires": [
+        "j12"
+      ],
+      "reward": 2100,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "radio",
+          "text": "Hear Ada’s plan at Radio Sal."
+        },
+        {
+          "kind": "inspect",
+          "location": "archive",
+          "text": "Copy the original coast register."
+        },
+        {
+          "kind": "reach",
+          "location": {
+            "x": -730,
+            "z": 460
+          },
+          "text": "Meet La Sal’s crew outside the market."
+        },
+        {
+          "kind": "wait",
+          "location": {
+            "x": -730,
+            "z": 460
+          },
+          "text": "Let the fishers check the family names."
+        },
+        {
+          "kind": "deliver",
+          "location": "annex",
+          "text": "File a public duplicate at Northlight."
+        }
+      ]
+    },
+    {
+      "id": "n16",
+      "title": "The Names We Kept",
+      "actor": "nico",
+      "chapter": 6,
+      "requires": [
+        "n15"
+      ],
+      "reward": 2300,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "chapel",
+          "text": "Ask Sister Sol for the refuge register."
+        },
+        {
+          "kind": "inspect",
+          "location": "pawn",
+          "text": "Read Sol’s old household repair ledger."
+        },
+        {
+          "kind": "inspect",
+          "location": "radio",
+          "text": "Check the names against Ada’s callers."
+        },
+        {
+          "kind": "deliver",
+          "location": "survey",
+          "text": "Return the signed family corrections."
+        }
+      ]
+    },
+    {
+      "id": "j16",
+      "title": "Every Debt Leaves a Mark",
+      "actor": "both",
+      "chapter": 7,
+      "requires": [
+        "j15"
+      ],
+      "reward": 5500,
+      "steps": [
+        {
+          "kind": "talk",
+          "location": "cafe",
+          "text": "As Nico, sit with Ines one more time."
+        },
+        {
+          "kind": "deliver",
+          "location": "archive",
+          "text": "Leave the final unedited route book with Alma."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Mara at Vale Motors."
+        },
+        {
+          "kind": "getcar",
+          "text": "Take the family’s restored Solano."
+        },
+        {
+          "kind": "drive",
+          "location": {
+            "x": -320,
+            "z": 180
+          },
+          "text": "Drive down to the harbour for the last handover."
+        },
+        {
+          "kind": "switch",
+          "text": "Switch to Nico outside the customs house."
+        },
+        {
+          "kind": "choice",
+          "location": "customs",
+          "text": "With Mara, choose the life after the case."
+        }
+      ]
+    }
+  ],
+  "interiors": [
+    {
+      "id": "pawn",
+      "name": "La Estrella Pawn & Repair",
+      "district": "old",
+      "type": "pawn",
+      "x": -215,
+      "z": -140
+    },
+    {
+      "id": "wreckers",
+      "name": "Marea Wreckers",
+      "district": "port",
+      "type": "chopshop",
+      "x": -535,
+      "z": 235
+    },
+    {
+      "id": "casino",
+      "name": "Casa de Noche",
+      "district": "beach",
+      "type": "casino",
+      "x": 285,
+      "z": 615
+    },
+    {
+      "id": "range",
+      "name": "East Yard Practice Range",
+      "district": "works",
+      "type": "range",
+      "x": 585,
+      "z": 275
+    },
+    {
+      "id": "shelter",
+      "name": "San Telmo Trail Shelter",
+      "district": "forest",
+      "type": "shelter",
+      "x": -735,
+      "z": -680
+    },
+    {
+      "id": "transport",
+      "name": "Island Line Dispatch House",
+      "district": "ridge",
+      "type": "transport",
+      "x": 165,
+      "z": -490
+    },
+    {
+      "id": "radio",
+      "name": "Radio Sal 103.7",
+      "district": "marsh",
+      "type": "radio",
+      "x": -790,
+      "z": 550
+    },
+    {
+      "id": "annex",
+      "name": "Northlight Police Annex",
+      "district": "north",
+      "type": "police",
+      "x": 760,
+      "z": -455
+    },
+    {
+      "id": "hangar",
+      "name": "Vera’s Northlight Hangar",
+      "district": "north",
+      "type": "garage",
+      "x": 585,
+      "z": -490
+    },
+    {
+      "id": "terminal",
+      "name": "Northlight Freight Terminal",
+      "district": "north",
+      "type": "terminal",
+      "x": 675,
+      "z": -490
+    },
+    {
+      "id": "tower",
+      "name": "Northlight Control",
+      "district": "north",
+      "type": "tower",
+      "x": 685,
+      "z": -610
+    },
+    {
+      "id": "lighthouse",
+      "name": "Faro de la Memoria",
+      "district": "north",
+      "type": "lighthouse",
+      "x": 780,
+      "z": -590
+    },
+    {
+      "id": "fishery",
+      "name": "La Sal Fish Market",
+      "district": "marsh",
+      "type": "fishery",
+      "x": -690,
+      "z": 485
+    },
+    {
+      "id": "boathouse",
+      "name": "Gideon’s Boathouse",
+      "district": "marsh",
+      "type": "boathouse",
+      "x": -590,
+      "z": 485
+    },
+    {
+      "id": "survey",
+      "name": "Salt Marsh Field Station",
+      "district": "marsh",
+      "type": "survey",
+      "x": -690,
+      "z": 585
+    },
+    {
+      "id": "chapel",
+      "name": "Santa Marea Refuge",
+      "district": "marsh",
+      "type": "chapel",
+      "x": -590,
+      "z": 585
+    },
+    {
+      "id": "bank",
+      "name": "Mirador Savings",
+      "district": "ridge",
+      "type": "bank",
+      "x": -40,
+      "z": -490
+    },
+    {
+      "id": "lawyer",
+      "name": "Serrano Legal Chambers",
+      "district": "ridge",
+      "type": "lawyer",
+      "x": 45,
+      "z": -490
+    },
+    {
+      "id": "gallery",
+      "name": "Serrat Foundation Gallery",
+      "district": "ridge",
+      "type": "gallery",
+      "x": -40,
+      "z": -590
+    },
+    {
+      "id": "villa",
+      "name": "Casa Serrat",
+      "district": "ridge",
+      "type": "villa",
+      "x": 45,
+      "z": -590
+    },
+    {
+      "id": "ranger",
+      "name": "Green Ridge Ranger Station",
+      "district": "forest",
+      "type": "ranger",
+      "x": -520,
+      "z": -670
+    },
+    {
+      "id": "lodge",
+      "name": "Pine House Refuge",
+      "district": "forest",
+      "type": "home",
+      "x": -435,
+      "z": -670
+    },
+    {
+      "id": "quarry",
+      "name": "Old Quarry Office",
+      "district": "forest",
+      "type": "quarry",
+      "x": -435,
+      "z": -800
+    },
+    {
+      "id": "relay",
+      "name": "Sierra Relay Cabin",
+      "district": "forest",
+      "type": "relay",
+      "x": -520,
+      "z": -800
+    },
+    {
+      "id": "foundry",
+      "name": "Cinder Foundry",
+      "district": "works",
+      "type": "factory",
+      "x": 435,
+      "z": 225
+    },
+    {
+      "id": "power",
+      "name": "East Grid Substation",
+      "district": "works",
+      "type": "utility",
+      "x": 530,
+      "z": 225
+    },
+    {
+      "id": "diesel",
+      "name": "Diesel & Sons",
+      "district": "works",
+      "type": "garage",
+      "x": 435,
+      "z": 125
+    },
+    {
+      "id": "dispatch",
+      "name": "Cinder Freight Dispatch",
+      "district": "works",
+      "type": "dispatch",
+      "x": 530,
+      "z": 125
+    },
+    {
+      "id": "union",
+      "name": "Union Hall 19",
+      "district": "port",
+      "type": "union",
+      "x": -360,
+      "z": 225
+    },
+    {
+      "id": "clinic",
+      "name": "Santa Clara Clinic",
+      "district": "port",
+      "type": "clinic",
+      "x": -280,
+      "z": 225
+    },
+    {
+      "id": "bonded",
+      "name": "Bonded Warehouse B",
+      "district": "port",
+      "type": "warehouse",
+      "x": -280,
+      "z": 125
+    },
+    {
+      "id": "customs",
+      "name": "Old Customs House",
+      "district": "port",
+      "type": "customs",
+      "x": -360,
+      "z": 125
+    },
+    {
+      "id": "azul_club",
+      "name": "Club Mariposa",
+      "district": "beach",
+      "type": "club",
+      "x": 120,
+      "z": 595
+    },
+    {
+      "id": "hotel",
+      "name": "Hotel Maravilla",
+      "district": "beach",
+      "type": "hotel",
+      "x": 205,
+      "z": 595
+    },
+    {
+      "id": "boutique",
+      "name": "Sol y Sal Outfitters",
+      "district": "beach",
+      "type": "boutique",
+      "x": 120,
+      "z": 490
+    },
+    {
+      "id": "dive",
+      "name": "Blue Current Dive Shop",
+      "district": "beach",
+      "type": "dive",
+      "x": 205,
+      "z": 490
+    },
+    {
+      "id": "vale",
+      "name": "Vale Motors",
+      "district": "old",
+      "type": "garage",
+      "x": -285,
+      "z": -140
+    },
+    {
+      "id": "cafe",
+      "name": "Café Lucero",
+      "district": "old",
+      "type": "cafe",
+      "x": -365,
+      "z": -140
+    },
+    {
+      "id": "archive",
+      "name": "Municipal Archive",
+      "district": "old",
+      "type": "archive",
+      "x": -285,
+      "z": -240
+    },
+    {
+      "id": "flat",
+      "name": "Mara’s Apartment",
+      "district": "old",
+      "type": "home",
+      "x": -365,
+      "z": -240
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "lancha",
+      "name": "Lancha 22",
+      "kind": "coastal motor launch",
+      "water": true,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "brisa",
+      "name": "Brisa City",
+      "kind": "compact hatchback",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "azul",
+      "name": "Azul GT",
+      "kind": "grand touring coupe",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "marlin",
+      "name": "Marlin X4",
+      "kind": "utility SUV",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "cabo",
+      "name": "Cabo Workhorse",
+      "kind": "pickup",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "llano",
+      "name": "Llano Cargo",
+      "kind": "delivery van",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "albatros",
+      "name": "Albatros Estate",
+      "kind": "long-roof estate",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "toro",
+      "name": "Toro V8",
+      "kind": "muscle coupe",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "sierra",
+      "name": "Sierra RS",
+      "kind": "rally hatch",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "strider",
+      "name": "Strider 450",
+      "kind": "trail motorcycle",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "pueblo",
+      "name": "Pueblo Hauler",
+      "kind": "box truck",
+      "water": false,
+      "representation": "Original approximation."
+    },
+    {
+      "id": "porsche",
+      "name": "Porsche 911 Carrera 4S",
+      "kind": "licensed model / rear-engine coupe",
+      "water": false,
+      "representation": "Licensed recognizable car asset; see credits."
+    },
+    {
+      "id": "bmw",
+      "name": "BMW M4 Competition",
+      "kind": "licensed model / performance coupe",
+      "water": false,
+      "representation": "Licensed recognizable car asset; see credits."
+    },
+    {
+      "id": "ferrari",
+      "name": "Ferrari 458 Italia",
+      "kind": "licensed model / supercar",
+      "water": false,
+      "representation": "Licensed recognizable car asset; see credits."
+    },
+    {
+      "id": "solano",
+      "name": "Solano S6",
+      "kind": "sport sedan",
+      "water": false,
+      "representation": "Original approximation."
+    }
+  ],
+  "weapons": [
+    {
+      "id": "pistol",
+      "name": "Harbor 9",
+      "damage": 34,
+      "range": 55,
+      "rate": 0.28,
+      "clip": 12
+    },
+    {
+      "id": "smg",
+      "name": "Kestrel Compact",
+      "damage": 22,
+      "range": 45,
+      "rate": 0.11,
+      "clip": 24
+    },
+    {
+      "id": "rifle",
+      "name": "Ridge Carbine",
+      "damage": 48,
+      "range": 100,
+      "rate": 0.22,
+      "clip": 20
+    },
+    {
+      "id": "shotgun",
+      "name": "Breakwater 12",
+      "damage": 90,
+      "range": 22,
+      "rate": 0.9,
+      "clip": 6
+    }
+  ],
+  "work": [
+    {
+      "id": "channel",
+      "name": "The quiet channel",
+      "pay": 850,
+      "steps": 3
+    },
+    {
+      "id": "courier",
+      "name": "Lucero kitchen rounds",
+      "pay": 340,
+      "steps": 3
+    },
+    {
+      "id": "parts",
+      "name": "Parts runner",
+      "pay": 480,
+      "steps": 3
+    },
+    {
+      "id": "taxi",
+      "name": "Last ferry taxi",
+      "pay": 550,
+      "steps": 3
+    },
+    {
+      "id": "salvage",
+      "name": "Harbor salvage",
+      "pay": 420,
+      "steps": 3
+    },
+    {
+      "id": "timeTrial",
+      "name": "Old Quarter sprint",
+      "pay": 700,
+      "steps": 5
+    }
+  ],
+  "businesses": [
+    {
+      "id": "flat",
+      "name": "Apartment sublet",
+      "cost": 900,
+      "rate": 90,
+      "text": "Furnish the spare room. Earn $90 each active island hour."
+    },
+    {
+      "id": "cafe",
+      "name": "Lucero delivery stake",
+      "cost": 2800,
+      "rate": 180,
+      "text": "Fund Ines’s evening delivery route."
+    },
+    {
+      "id": "vale",
+      "name": "Vale service bay",
+      "cost": 3500,
+      "rate": 230,
+      "text": "Reopen your father’s second repair bay."
+    },
+    {
+      "id": "bonded",
+      "name": "Independent freight desk",
+      "cost": 4200,
+      "rate": 300,
+      "text": "A legal desk for cargo Rafi will not handle."
+    }
+  ],
+  "heists": [
+    {
+      "id": "bonded-cash",
+      "name": "The bonded night safe",
+      "at": "bonded",
+      "drop": "azul_club",
+      "pay": 1800,
+      "fee": 150,
+      "text": "Lift Meridian’s undeclared payroll and fence it through Leila."
+    },
+    {
+      "id": "mirador-bag",
+      "name": "Mirador after closing",
+      "at": "bank",
+      "drop": "boathouse",
+      "pay": 2500,
+      "fee": 250,
+      "text": "Open the trust courier’s deposit box, then disappear into the marsh."
+    },
+    {
+      "id": "serrat-collateral",
+      "name": "Serrat’s collateral",
+      "at": "villa",
+      "drop": "vale",
+      "pay": 2900,
+      "fee": 300,
+      "text": "Take the private reception safe’s bearer certificates back to Old Quarter."
+    }
+  ],
+  "races": [
+    {
+      "id": "harbor",
+      "name": "Harbor Circuit",
+      "fee": 100,
+      "pay": 1400
+    },
+    {
+      "id": "ridge",
+      "name": "Ridge Run",
+      "fee": 100,
+      "pay": 1700
+    },
+    {
+      "id": "coast",
+      "name": "La Costa Tour",
+      "fee": 100,
+      "pay": 2100
+    }
+  ],
+  "memories": [
+    {
+      "id": "memory-1",
+      "title": "The second key",
+      "district": "old"
+    },
+    {
+      "id": "memory-2",
+      "title": "A rally photograph",
+      "district": "old"
+    },
+    {
+      "id": "memory-3",
+      "title": "The repair book",
+      "district": "old"
+    },
+    {
+      "id": "memory-4",
+      "title": "Night-shift names",
+      "district": "port"
+    },
+    {
+      "id": "memory-5",
+      "title": "Two ships, one number",
+      "district": "port"
+    },
+    {
+      "id": "memory-6",
+      "title": "The bell rope",
+      "district": "port"
+    },
+    {
+      "id": "memory-7",
+      "title": "A tourist’s negative",
+      "district": "beach"
+    },
+    {
+      "id": "memory-8",
+      "title": "The missing room",
+      "district": "beach"
+    },
+    {
+      "id": "memory-9",
+      "title": "Before the seawall",
+      "district": "beach"
+    },
+    {
+      "id": "memory-10",
+      "title": "The maintenance window",
+      "district": "works"
+    },
+    {
+      "id": "memory-11",
+      "title": "A union envelope",
+      "district": "works"
+    },
+    {
+      "id": "memory-12",
+      "title": "The charge numbers",
+      "district": "works"
+    },
+    {
+      "id": "memory-13",
+      "title": "The donor’s toast",
+      "district": "ridge"
+    },
+    {
+      "id": "memory-14",
+      "title": "The gardener’s ledger",
+      "district": "ridge"
+    },
+    {
+      "id": "memory-15",
+      "title": "An unsigned easement",
+      "district": "ridge"
+    },
+    {
+      "id": "memory-16",
+      "title": "The ridge call",
+      "district": "forest"
+    },
+    {
+      "id": "memory-17",
+      "title": "Pine House groceries",
+      "district": "forest"
+    },
+    {
+      "id": "memory-18",
+      "title": "The quarry cricket",
+      "district": "forest"
+    },
+    {
+      "id": "memory-19",
+      "title": "La Sal recipes",
+      "district": "marsh"
+    },
+    {
+      "id": "memory-20",
+      "title": "The tide marker",
+      "district": "marsh"
+    },
+    {
+      "id": "memory-21",
+      "title": "A chapel candle",
+      "district": "marsh"
+    },
+    {
+      "id": "memory-22",
+      "title": "The controller’s mug",
+      "district": "north"
+    },
+    {
+      "id": "memory-23",
+      "title": "The keeper’s chart",
+      "district": "north"
+    },
+    {
+      "id": "memory-24",
+      "title": "The first light",
+      "district": "north"
+    }
+  ],
+  "photoPlaces": [
+    {
+      "id": "old",
+      "name": "The family workshop",
+      "x": -285,
+      "z": -128
+    },
+    {
+      "id": "port",
+      "name": "Working harbour",
+      "x": -400,
+      "z": 340
+    },
+    {
+      "id": "beach",
+      "name": "Bahía motor club",
+      "x": 160,
+      "z": 950
+    },
+    {
+      "id": "works",
+      "name": "Cinder skyline",
+      "x": 530,
+      "z": 280
+    },
+    {
+      "id": "ridge",
+      "name": "The trust’s ridge",
+      "x": 0,
+      "z": -540
+    },
+    {
+      "id": "forest",
+      "name": "Green Ridge",
+      "x": -560,
+      "z": -665
+    },
+    {
+      "id": "marsh",
+      "name": "Salt Marsh boardwalk",
+      "x": -700,
+      "z": 610
+    },
+    {
+      "id": "north",
+      "name": "The first light",
+      "x": 780,
+      "z": -578
+    }
+  ],
+  "limits": [
+    "Prototype graphics are below the observed OneState reference.",
+    "Most missions use shared driving, interaction, evidence and combat systems rather than custom cinematic levels.",
+    "Only the two opening operations were played naturally end to end; broad later coverage uses explicitly labelled fixtures and rule tests.",
+    "Desktop Chrome and desktop WebKit were observed; no physical phone was tested.",
+    "NPC intelligence, vehicle physics, interiors, dialogue and animation are simplified; traffic uses original approximate car bodies.",
+    "The observation wheel is a decorative animated landmark, not a simulated ride."
+  ]
+}
