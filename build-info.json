@@ -2,8 +2,8 @@
   "game": "Low Tide",
   "buildId": "d86ea58cad0f9731",
   "sourceFingerprint": "d86ea58cad0f9731a18b3d2dc91c6fca8df35907ab2cd7708e0f71536b870f89",
-  "completedPasses": 96,
-  "builtAt": "2026-10-15T23:09:15.991Z",
+  "completedPasses": 97,
+  "builtAt": "2026-10-15T23:13:33.854Z",
   "content": {
     "missions": 48,
     "interiors": 40,
@@ -126,7 +126,7 @@
     {
       "path": "README.txt",
       "bytes": 2551,
-      "sha256": "30360555b539275f958561060b5d647af99b3b0e35401b631f9c3bfdcda1a024"
+      "sha256": "6ce11684685db1f3c21410e9bb35633d6826f6886bf2dba61af46b423640256d"
     },
     {
       "path": "run.mjs",
