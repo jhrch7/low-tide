@@ -15,6 +15,6 @@ Start with Mara’s Salt in the Engine or switch to Nico’s The Returned Badge.
 
 Saving: current browser/origin only; export from Options before clearing browser data or moving hosts. Import on the other browser. The previous valid save is recoverable; story restart restores its full starting save. Browsers may evict storage.
 
-Build d86ea58cad0f9731; completed pass receipts at packaging: 97/100. Content: 48 authored campaign operations, 40 useful interiors, eight districts, 15 vehicle classes. This experimental prototype has significant visual/animation/simulation limitations; passing tests does not establish OneState graphical parity. Actual physical-phone performance is unverified.
+Build a3123626d8b94897; completed pass receipts at packaging: 98/100. Content: 48 authored campaign operations, 40 useful interiors, eight districts, 15 vehicle classes. This experimental prototype has significant visual/animation/simulation limitations; passing tests does not establish OneState graphical parity. Actual physical-phone performance is unverified.
 
 Original game material is provided for personal play; see credits.html/CREDITS.md and vendor licenses for third-party rights. Character derivatives are incorporated only in this game’s cast bundle, not offered as a standalone model collection.

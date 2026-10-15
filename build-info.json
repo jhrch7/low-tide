@@ -1,9 +1,9 @@
 {
   "game": "Low Tide",
-  "buildId": "d86ea58cad0f9731",
-  "sourceFingerprint": "d86ea58cad0f9731a18b3d2dc91c6fca8df35907ab2cd7708e0f71536b870f89",
-  "completedPasses": 97,
-  "builtAt": "2026-10-15T23:13:33.854Z",
+  "buildId": "a3123626d8b94897",
+  "sourceFingerprint": "a3123626d8b948979628b48616da575c4f71e952333e031e78bc33bb42ba614c",
+  "completedPasses": 98,
+  "builtAt": "2026-10-15T23:21:30.776Z",
   "content": {
     "missions": 48,
     "interiors": 40,
@@ -22,6 +22,16 @@
       "path": "assets/aerial_asphalt_01.jpg",
       "bytes": 635143,
       "sha256": "28bfd71288b364f825e0feb750e487410422d80bf3c31d32da01cae3bf085b58"
+    },
+    {
+      "path": "assets/app192.png",
+      "bytes": 1621,
+      "sha256": "0abdf859e222f396452e5bd14d9abfdb6ff8c3df5768edebd8e9566c39cb6640"
+    },
+    {
+      "path": "assets/app512.png",
+      "bytes": 7203,
+      "sha256": "7fc666caccdd335dc5204831dadffb16ac0ebf64f498d6d8f4ea46af70ecdf8f"
     },
     {
       "path": "assets/bmw-m4.glb",
@@ -120,18 +130,23 @@
     },
     {
       "path": "index.html",
-      "bytes": 3485,
-      "sha256": "dcfec1f51e99a97506a95cbe4305bf45e5af5a00e09db831c6c695c995ed2c46"
+      "bytes": 3588,
+      "sha256": "10206d43f23197efbb8149d4e3d69c92df8078e41623c6af076f29141d7178d0"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 385,
+      "sha256": "1a8b78d19c101e0dbb4202e0f99c15f443c7b05033399309a7dda521910f709b"
     },
     {
       "path": "README.txt",
       "bytes": 2551,
-      "sha256": "6ce11684685db1f3c21410e9bb35633d6826f6886bf2dba61af46b423640256d"
+      "sha256": "0e6d9da44bc6c41644635f60b0433c277eec2ac2969aa8c08cf975645f6a41c2"
     },
     {
       "path": "run.mjs",
-      "bytes": 1374,
-      "sha256": "d69a25931dbdf44130b498dc53eb05be0a7ea14c95d238dc3675a7ba85c26ac3"
+      "bytes": 1417,
+      "sha256": "91c2fdffa521b5f591cc5188edd8393c13369dde7f0e8150e0647c199b927506"
     },
     {
       "path": "src/actors.js",
@@ -181,7 +196,7 @@
     {
       "path": "src/build-mode.js",
       "bytes": 72,
-      "sha256": "6535f5990811fcdf9970329b525401ad3fd5c686b8fd7f85550b3332c7680f79"
+      "sha256": "645c580d17924b6266f9d58a857926464a8edb7c9c1d1802fc15df1a43ba833d"
     },
     {
       "path": "src/business.js",
@@ -350,8 +365,8 @@
     },
     {
       "path": "src/main.js",
-      "bytes": 32073,
-      "sha256": "7dcab4e070139fad56556d3db74bc13aba4e8a784fb187be4cac3d8eaf775806"
+      "bytes": 32210,
+      "sha256": "f09593ba9f517b808d0c0cc26786a2769f8110c4dc0a1c7ccf4db54a7f69a86d"
     },
     {
       "path": "src/map.js",
@@ -387,6 +402,11 @@
       "path": "src/north.js",
       "bytes": 580,
       "sha256": "50667592e66b72049b8d82f3aaf12758f3448c44d5fbd1995588b226042e2c87"
+    },
+    {
+      "path": "src/offline.js",
+      "bytes": 3437,
+      "sha256": "09e7414cb4d8e0085f63d3b1ff21ed375c50bc115657e3d25939d5dee215af40"
     },
     {
       "path": "src/partners.js",
@@ -622,6 +642,11 @@
       "path": "style.css",
       "bytes": 13937,
       "sha256": "016fd9fff3f8a2c10a53eb579713f80a5295d098271b0b5f0fe51ce02b9abfbc"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 2536,
+      "sha256": "e47fe3d58e027f00ead67b5da3ba29068e219fa7ef22a8b8f15186c2e90e8e01"
     },
     {
       "path": "vendor/BufferGeometryUtils.js",
